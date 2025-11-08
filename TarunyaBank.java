@@ -78,15 +78,15 @@ class UserData {
 
         System.out.println("\nStep-2:");
         System.out.println("Please complete your KYC to open your wallet:");
-        sleep(1000);
+        sleep(3000);
 
         System.out.print("Enter your Aadhar Number: ");
         aadharNumber = input.nextLong();
 
         System.out.println("Wait, fetching details...");
-        sleep(1000);
+        sleep(2000);
         System.out.println("DigiLocker Fetching...");
-        sleep(1000);
+        sleep(5000);
 
         System.out.println("Congrats, KYC completed successfully!");
         System.out.println("Your " + accountType + " is created!");
@@ -292,3 +292,4 @@ public class TarunyaBank {
         data.BankSystem();
     }
 }
+
