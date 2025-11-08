@@ -4,6 +4,7 @@ class Library {
     private int no_of_Books;
     private int no_of_IssuedBooks;
 
+    // Constructor
     Library() {
         this.books = new String[50];
         this.issuedBooks = new String[50];
@@ -11,9 +12,20 @@ class Library {
         this.no_of_IssuedBooks = 0;
     }
 
+    // Sleep method
+    public void sleep(int ms) {
+        try {
+            Thread.sleep(ms);
+        } catch (InterruptedException e) {
+            System.err.println("Error!");
+        }
+    }
+
     // Add a new book
     public void addBook(String book) {
         this.books[no_of_Books++] = book;
+        System.out.println("Processing...");
+        sleep(3000);
         System.out.println(book + " is added to the library.");
     }
 
@@ -55,7 +67,7 @@ public class LibraryProject {
 
         // Add books
         lib.addBook("Zero To One");
-        lib.addBook("Rich Dad vs Poor Dad");
+        lib.addBook("Rich Dad Poor Dad");
         lib.addBook("Introduction to Algorithms");
 
         // Show available books
@@ -65,6 +77,6 @@ public class LibraryProject {
         lib.issueBook("Rich Dad Poor Dad", "Tarun Chaudhary", 15);
 
         // Return a book
-        lib.returnBook("Rich Dad Poor Dad", 200, "Tarun Chaudhary");
+        lib.returnBook("Rich Dad Poor Dad", 20, "Tarun Chaudhary");
     }
 }
